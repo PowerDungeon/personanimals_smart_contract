@@ -82,19 +82,11 @@ contract PERSONAnimalsNFT is
         }
     }
 
-    function setRole(bytes32 role_, address account_)
-        public
-        onlyRole(DEFAULT_ADMIN_ROLE)
-    {
-        require(role_ != DEFAULT_ADMIN_ROLE, "Cannot set default admin role");
-        grantRole(role_, account_);
-    }
-
     function transferDefaultAdminRole(address account_)
         public
         onlyRole(DEFAULT_ADMIN_ROLE)
     {
-        setRole(DEFAULT_ADMIN_ROLE, account_);
+        grantRole(DEFAULT_ADMIN_ROLE, account_);
         revokeRole(DEFAULT_ADMIN_ROLE, _msgSender());
         transferOwnership(account_);
     }
