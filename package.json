@@ -1,0 +1,17 @@
+{
+  "name": "personanimals_smart_contract",
+  "version": "1.0.0",
+  "description": "We are hypocritical, cruel, greedy, and belligerent, but there is always some light that makes us face life bravely.",
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "start": "truffle-flattener ./contracts/pa.sol > ./build/pa.sol"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.5.0"
+  },
+  "author": "PowerDungeon",
+  "license": "MIT"
+}
